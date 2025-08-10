@@ -39,6 +39,9 @@ const server = http.createServer((req,res) => {
             res.end(data)
         })
         
+    }else{
+        res.writeHead(500,{"Content-Type":"text/plain"})
+        return res.end("this is wrong address for the website page dude try again")
     }
 
 })
